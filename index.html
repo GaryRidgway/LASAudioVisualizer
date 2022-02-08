@@ -1,0 +1,24 @@
+<!DOCTYPE html><html lang="en"><head>
+    <script src="p5.min.js"></script>
+    <script src="sketch.js"></script>
+    <script src="img_preview.js"></script>
+    <script src="audio_handler.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+
+    </head>
+    <body>
+        <form>
+            <div>
+                <div id="img-preview"></div>
+                <input type="file" accept="image/*" id="choose-image" name="choose-image" />
+                <label for="choose-image">Choose File</label>
+            </div>
+            <div>
+                <input type="file" accept="audio/*" id="choose-audio" name="choose-audio" ></input>
+                <label for="choose-audio">Choose Audio</label>
+                <audio id="audio" controls autoplay></audio>
+            </div>
+          </form>
+    </body>
+</html>
