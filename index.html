@@ -1,5 +1,6 @@
 <!DOCTYPE html><html lang="en"><head>
     <script src="p5.min.js"></script>
+    <!-- <script src="p5.sound.min.js"></script> -->
     <script src="sketch.js"></script>
     <script src="img_preview.js"></script>
     <script src="audio_handler.js"></script>
@@ -10,7 +11,10 @@
     <body>
         <form>
             <div>
-                <div id="img-preview"></div>
+                <div id="img-visualizer">
+                    <div id="img-preview"></div>
+                    <div id="p5-visualizer"></div>
+                </div>
                 <input type="file" accept="image/*" id="choose-image" name="choose-image" />
                 <label for="choose-image">Choose File</label>
             </div>

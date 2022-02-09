@@ -1,13 +1,23 @@
+#img-visualizer {
+    position: relative;
+}
+
 #img-preview {
-    display: none; 
-    width: 600px;   
-    border: 2px dashed #333;  
+    display: block;
+    width: 600px;
+    height: 600px;
+    background-color: #fafafa;  
     margin-bottom: 20px;
 }
 #img-preview img {  
     width: 100%;
-    height: auto; 
-    display: block;   
+    height: auto;
+    display: block;
+}
+#p5-visualizer {
+    position: absolute;
+    top: 0;
+    height: 600px;
 }
 [type="file"] {
     height: 0;  
