@@ -1,5 +1,5 @@
 // Help from: https://w3collective.com/preview-selected-img-file-input-js/ .
-
+let p5Image;
 document.addEventListener("DOMContentLoaded", function() {
     const chooseFile = document.getElementById("choose-image");
     const imgPreview = document.getElementById("img-preview");
@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
             fileReader.addEventListener("load", function () {
             imgPreview.style.display = "block";
             imgPreview.innerHTML = '<img src="' + this.result + '" />';
+            p5Image = loadImage(this.result);
             });    
         }
     }
