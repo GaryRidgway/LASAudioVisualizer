@@ -23,7 +23,13 @@ body {
           justify-content: center;
 }
 
-#img-visualizer:hover #img-visualizer--audio {
+#img-visualizer--visuals-container {
+  overflow: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+#img-visualizer:hover #img-visualizer--controls {
   -webkit-filter: opacity(0.75);
           filter: opacity(0.75);
   -webkit-transition: -webkit-filter 0.2s ease-in-out;
@@ -57,18 +63,61 @@ body {
           filter: drop-shadow(0 0 0.75rem #000);
   position: absolute;
   top: 364px;
+  width: 612px;
+  height: 200px;
 }
 
-#img-visualizer--audio {
+#img-visualizer--controls {
   position: absolute;
-  bottom: 25px;
-  width: 550px;
+  top: 0;
+  width: 100%;
+  height: 100%;
   -webkit-filter: opacity(0);
           filter: opacity(0);
   -webkit-transition: -webkit-filter 0.2s ease-in-out;
   transition: -webkit-filter 0.2s ease-in-out;
   transition: filter 0.2s ease-in-out;
   transition: filter 0.2s ease-in-out, -webkit-filter 0.2s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#img-visualizer--controls--audio {
+  position: absolute;
+  bottom: 25px;
+  width: 550px;
+}
+
+#img-visualizer--controls--vertical {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  width: 612px;
+  top: 290px;
+  left: 323px;
+  -webkit-appearance: none;
+  /* Override default look */
+  position: absolute;
+  -moz-appearance: none;
+       appearance: none;
+  background-color: #f1f3f4;
+}
+
+#img-visualizer--controls--vertical.slider::-webkit-slider-thumb, #img-visualizer--controls--vertical.slider::-moz-range-thumb {
+  -webkit-appearance: none;
+  /* Override default look */
+  appearance: none;
+  width: 25px;
+  /* Set a specific slider handle width */
+  height: 25px;
+  /* Slider handle height */
+  background: #04AA6D;
+  /* Green background */
+  cursor: pointer;
+  /* Cursor on hover */
 }
 
 #selectors {

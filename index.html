@@ -1,16 +1,24 @@
 <!DOCTYPE html><html lang="en"><head>
     <link rel="stylesheet" type="text/css" href="css/dist/visualizer_styles.min.css">
+    
     <meta charset="utf-8">
+    <title>LAS Audio visualizer</title>
+    <meta name="description" content="A web based audio visualizer for visual podcast recordings.">
 
     </head>
     <body>
         <form id="visualizer-form">
             <div id="img-visualizer">
-                <div id="img-visualizer--preview"></div>
-                <div id="img-visualizer--visualizer">
-                    <canvas id="img-visualizer--visualizer--canvas" width="600" height="200" style="width: 600px; height: 200px;"></canvas>
+                <div id="img-visualizer--visuals-container">
+                    <div id="img-visualizer--preview"></div>
+                    <div id="img-visualizer--visualizer">
+                        <canvas id="img-visualizer--visualizer--canvas" width="611" height="200"></canvas>
+                    </div>
                 </div>
-                <audio id="img-visualizer--audio" controls></audio>
+                <div id="img-visualizer--controls">
+                    <audio id="img-visualizer--controls--audio" controls></audio>
+                    <input type="range" min="1" max="600" value="463" class="slider" id="img-visualizer--controls--vertical" oninput="visualizerSetHeight()">
+                </div>
             </div>
             <div id="selectors">
                 <div id="image-selector" class="selectors--selector">
@@ -24,8 +32,8 @@
             </div>
           </form>
           <script src="https://cdn.jsdelivr.net/gh/foobar404/wave.js/dist/bundle.iife.js"></script>
-          <script src="p5.min.js"></script>
-          <script src="p5.sound.min.js"></script>
+          <script src="p5/p5.min.js"></script>
+          <script src="p5/p5.sound.min.js"></script>
           <script src="sketch.js"></script>
           <script src="img_preview.js"></script>
           <script src="audio_handler.js"></script>

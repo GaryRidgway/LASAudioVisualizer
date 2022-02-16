@@ -3,8 +3,13 @@
     display: flex;
     justify-content: center;
 
+    &--visuals-container {
+        overflow: hidden;
+        transform: translate3d(0,0,0);
+    }
+
     &:hover {
-        #img-visualizer--audio {
+        #img-visualizer--controls {
             filter: opacity(0.75);
             transition: filter 0.2s ease-in-out;
         }
@@ -33,14 +38,46 @@
             filter: drop-shadow(0 0 0.75rem #000);
             position: absolute;
             top: 364px;
+            width: 612px;
+            height: 200px;
         }
     }
 
-    &--audio {
+    &--controls {
         position: absolute;
-        bottom: 25px;
-        width: 550px;
+        top: 0;
+        width: 100%;
+        height: 100%;
         filter: opacity(0);
         transition: filter 0.2s ease-in-out;
+        display: flex;
+        justify-content: center;
+
+        &--audio {
+            position: absolute;
+            bottom: 25px;
+            width: 550px;
+        }
+
+        &--vertical {
+            transform: rotate(90deg);
+            width: 612px;
+            top: 290px;
+            left: 323px;
+            -webkit-appearance: none; /* Override default look */
+            position: absolute;
+            appearance: none;
+            background-color: #f1f3f4;
+
+            &.slider::-webkit-slider-thumb,
+            &.slider::-moz-range-thumb {
+                -webkit-appearance: none; /* Override default look */
+                appearance: none;
+                width: 25px; /* Set a specific slider handle width */
+                height: 25px; /* Slider handle height */
+                background: #04AA6D; /* Green background */
+                cursor: pointer; /* Cursor on hover */
+            }
+        }
     }
 }
