@@ -1,0 +1,29 @@
+#selectors {
+    display: flex;
+    justify-content: space-between;
+    .selectors--selector {
+
+    }
+    input[type="file"] {
+        height: 0;  
+        width: 0;
+        overflow: hidden;
+    
+        & + label {
+            font-family: sans-serif;
+            background: #f44336;
+            padding: 10px 30px;
+            border: 2px solid #f44336;
+            border-radius: 3px;
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: block;
+    
+            &:hover {
+                background-color: #fff;
+                color: #f44336;
+            }
+        }
+    }
+}

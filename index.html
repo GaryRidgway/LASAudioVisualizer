@@ -1,27 +1,33 @@
 <!DOCTYPE html><html lang="en"><head>
-    <script src="p5.min.js"></script>
-    <script src="p5.sound.min.js"></script>
-    <script src="sketch.js"></script>
-    <script src="img_preview.js"></script>
-    <script src="audio_handler.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/dist/visualizer_styles.min.css">
     <meta charset="utf-8">
 
     </head>
     <body>
-        <form>
-            <div>
-                <div id="img-visualizer">
-                    <div id="img-preview"></div>
-                    <div id="p5-visualizer"></div>
+        <form id="visualizer-form">
+            <div id="img-visualizer">
+                <div id="img-visualizer--preview"></div>
+                <div id="img-visualizer--visualizer">
+                    <canvas id="img-visualizer--visualizer--canvas" width="600" height="200" style="width: 600px; height: 200px;"></canvas>
                 </div>
-                <input type="file" accept="image/*" id="choose-image" name="choose-image" />
-                <label for="choose-image">Choose File</label>
+                <audio id="img-visualizer--audio" controls></audio>
             </div>
-            <div id="audio-selector">
-                <input type="file" accept="audio/*" id="choose-audio" name="choose-audio" ></input>
-                <label for="choose-audio">Choose Audio</label>
+            <div id="selectors">
+                <div id="image-selector" class="selectors--selector">
+                    <input type="file" accept="image/*" id="choose-image" name="choose-image" />
+                    <label for="choose-image">Choose Image</label>
+                </div>
+                <div id="audio-selector" class="selectors--selector">
+                    <input type="file" accept="audio/*" id="choose-audio" name="choose-audio" ></input>
+                    <label for="choose-audio">Choose Audio</label>
+                </div>
             </div>
           </form>
+          <script src="https://cdn.jsdelivr.net/gh/foobar404/wave.js/dist/bundle.iife.js"></script>
+          <script src="p5.min.js"></script>
+          <script src="p5.sound.min.js"></script>
+          <script src="sketch.js"></script>
+          <script src="img_preview.js"></script>
+          <script src="audio_handler.js"></script>
     </body>
 </html>

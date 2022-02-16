@@ -2,7 +2,7 @@
 let p5Image;
 document.addEventListener("DOMContentLoaded", function() {
     const chooseFile = document.getElementById("choose-image");
-    const imgPreview = document.getElementById("img-preview");
+    const imgPreview = document.getElementById("img-visualizer--preview");
     chooseFile.addEventListener("change", function () {
         getImgData();
     });
@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function() {
             fileReader.addEventListener("load", function () {
             imgPreview.style.display = "block";
             imgPreview.innerHTML = '<img src="' + this.result + '" />';
-            p5Image = loadImage(this.result);
             });    
         }
     }

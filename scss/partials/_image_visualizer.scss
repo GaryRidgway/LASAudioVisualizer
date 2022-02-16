@@ -1,0 +1,46 @@
+#img-visualizer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    &:hover {
+        #img-visualizer--audio {
+            filter: opacity(0.75);
+            transition: filter 0.2s ease-in-out;
+        }
+    } 
+
+    &--preview {
+        display: block;
+        width: 600px;
+        height: 600px;
+        background-color: #f1f3f4;
+
+        img {  
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+
+    &--visualizer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 600px;
+
+        &--canvas {
+            filter: drop-shadow(0 0 0.75rem #000);
+            position: absolute;
+            top: 364px;
+        }
+    }
+
+    &--audio {
+        position: absolute;
+        bottom: 25px;
+        width: 550px;
+        filter: opacity(0);
+        transition: filter 0.2s ease-in-out;
+    }
+}
