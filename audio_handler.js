@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
             stroke: 2,
             type: "shockwave",
             // type: "shine",
-            colors: ["#ffffff", "#ffffffbd", "#ffffff94"]
+            colors: ["#ffffff", "#ffffffbd", "#ffffff66"]
             // colors: ["#ffffffde", "#00000000"]
         }
         wave.fromElement(

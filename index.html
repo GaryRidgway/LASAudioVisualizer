@@ -6,28 +6,36 @@
     <meta name="description" content="A web based audio visualizer for visual podcast recordings.">
 
     </head>
-    <body>
+    <body id="visualizer-body">
         <form id="visualizer-form">
             <div id="img-visualizer">
                 <div id="img-visualizer--visuals-container">
-                    <div id="img-visualizer--preview"></div>
+                    <div id="img-visualizer--preview">
+                        <div id="img-visualizer--demo-text">
+                            Hover here to input media!
+                        </div>
+                    </div>
                     <div id="img-visualizer--visualizer">
                         <canvas id="img-visualizer--visualizer--canvas" width="611" height="200"></canvas>
                     </div>
                 </div>
                 <div id="img-visualizer--controls">
                     <audio id="img-visualizer--controls--audio" controls></audio>
-                    <input type="range" min="1" max="600" value="463" class="slider" id="img-visualizer--controls--vertical" oninput="visualizerSetHeight()">
-                </div>
-            </div>
-            <div id="selectors">
-                <div id="image-selector" class="selectors--selector">
-                    <input type="file" accept="image/*" id="choose-image" name="choose-image" />
-                    <label for="choose-image">Choose Image</label>
-                </div>
-                <div id="audio-selector" class="selectors--selector">
-                    <input type="file" accept="audio/*" id="choose-audio" name="choose-audio" ></input>
-                    <label for="choose-audio">Choose Audio</label>
+                    <input type="range" min="1" max="600" value="455" class="slider" id="img-visualizer--controls--vertical" oninput="visualizerSetHeight()">
+                    <div id="selectors">
+                        <div id="image-selector" class="selectors--selector">
+                            <input type="file" accept="image/*" id="choose-image" name="choose-image" />
+                            <label for="choose-image">Image</label>
+                        </div>
+                        <div id="audio-selector" class="selectors--selector">
+                            <input type="file" accept="audio/*" id="choose-audio" name="choose-audio" ></input>
+                            <label for="choose-audio">Audio</label>
+                        </div>
+                        <div id="background-color-selector"  class="selectors--selector">
+                            <input type="color" id="choose-background-color" name="choose-background-color" value="#dd6464" oninput="setBackgroundColor()">
+                            <label for="choose-background-color">Background</label>
+                        </div>
+                    </div>
                 </div>
             </div>
           </form>

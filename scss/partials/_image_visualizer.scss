@@ -1,7 +1,9 @@
 #img-visualizer {
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: center; 
+    background-color: #fff;
+    filter: drop-shadow(rgba(0,0,0,0.9) 10px 10px 49px);
 
     &--visuals-container {
         overflow: hidden;
@@ -19,13 +21,20 @@
         display: block;
         width: 600px;
         height: 600px;
-        background-color: #f1f3f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         img {  
             width: 100%;
             height: auto;
             display: block;
         }
+    }
+
+    &--demo-text {
+        font-family: sans-serif;
+        font-size: 2rem;
     }
 
     &--visualizer {
@@ -57,13 +66,14 @@
             position: absolute;
             bottom: 25px;
             width: 550px;
+            filter: drop-shadow(rgba(0,0,0,0.43) 0px 0px 25px);
         }
 
         &--vertical {
             transform: rotate(90deg);
             width: 612px;
             top: 290px;
-            left: 323px;
+            left: 300px;
             -webkit-appearance: none; /* Override default look */
             position: absolute;
             appearance: none;

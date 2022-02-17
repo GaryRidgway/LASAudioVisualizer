@@ -1,6 +1,12 @@
 // Help from: https://w3collective.com/preview-selected-img-file-input-js/ .
 let p5Image;
+let visualizerBody;
+let colorSelector;
+
 document.addEventListener("DOMContentLoaded", function() {
+    visualizerBody = document.getElementById("visualizer-body");
+    colorSelector  = document.getElementById("choose-background-color");
+
     const chooseFile = document.getElementById("choose-image");
     const imgPreview = document.getElementById("img-visualizer--preview");
     chooseFile.addEventListener("change", function () {
@@ -18,4 +24,10 @@ document.addEventListener("DOMContentLoaded", function() {
             });    
         }
     }
+
+    setBackgroundColor();
 });
+
+function setBackgroundColor() {
+    visualizerBody.style.backgroundColor = colorSelector.value;
+}
