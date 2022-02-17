@@ -21,7 +21,9 @@
                 </div>
                 <div id="img-visualizer--controls">
                     <audio id="img-visualizer--controls--audio" controls></audio>
-                    <input type="range" min="1" max="600" value="455" class="slider" id="img-visualizer--controls--vertical" oninput="visualizerSetHeight()">
+                    <div id="img-visualizer--controls--vertical__container">
+                        <input type="range" min="1" max="600" value="455" class="slider" id="img-visualizer--controls--vertical" oninput="visualizerSetHeight()">
+                    </div>
                     <div id="selectors">
                         <div id="image-selector" class="selectors--selector">
                             <input type="file" accept="image/*" id="choose-image" name="choose-image" />

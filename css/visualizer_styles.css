@@ -22,7 +22,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #fff;
+  background-color: #f1f3f4;
   -webkit-filter: drop-shadow(rgba(0, 0, 0, 0.9) 10px 10px 49px);
           filter: drop-shadow(rgba(0, 0, 0, 0.9) 10px 10px 49px);
 }
@@ -34,8 +34,8 @@ body {
 }
 
 #img-visualizer:hover #img-visualizer--controls {
-  -webkit-filter: opacity(0.75);
-          filter: opacity(0.75);
+  -webkit-filter: opacity(1);
+          filter: opacity(1);
   -webkit-transition: -webkit-filter 0.2s ease-in-out;
   transition: -webkit-filter 0.2s ease-in-out;
   transition: filter 0.2s ease-in-out;
@@ -109,6 +109,8 @@ body {
   width: 550px;
   -webkit-filter: drop-shadow(rgba(0, 0, 0, 0.43) 0px 0px 25px);
           filter: drop-shadow(rgba(0, 0, 0, 0.43) 0px 0px 25px);
+  -webkit-filter: opacity(0.75);
+          filter: opacity(0.75);
 }
 
 #img-visualizer--controls--vertical {
@@ -116,7 +118,7 @@ body {
           transform: rotate(90deg);
   width: 612px;
   top: 290px;
-  left: 300px;
+  left: -300px;
   -webkit-appearance: none;
   /* Override default look */
   position: absolute;
@@ -139,6 +141,14 @@ body {
   /* Cursor on hover */
 }
 
+#img-visualizer--controls--vertical__container {
+  height: 100%;
+  overflow: hidden;
+  width: 50px;
+  position: absolute;
+  left: 600px;
+}
+
 #selectors {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -154,7 +164,7 @@ body {
           align-items: center;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background: #fafafa;
+  background: #f1f3f4;
   position: absolute;
   top: 100%;
 }
@@ -206,7 +216,7 @@ body {
 
 #selectors input[type="file"] + label:hover,
 #selectors input[type="color"] + label:hover {
-  background-color: #fff;
+  background-color: #f1f3f4;
   color: #f44336;
 }
 

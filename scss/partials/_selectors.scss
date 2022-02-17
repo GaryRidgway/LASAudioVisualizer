@@ -6,7 +6,7 @@
     padding: 12px;
     align-items: center;
     box-sizing: border-box;
-    background: #fafafa;
+    background: $white;
     position: absolute;
     top: 100%;
 
@@ -45,7 +45,7 @@
             justify-content: center;
     
             &:hover {
-                background-color: #fff;
+                background-color: $white;
                 color: #f44336;
             }
 

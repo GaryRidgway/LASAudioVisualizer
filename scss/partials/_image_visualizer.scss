@@ -2,7 +2,7 @@
     position: relative;
     display: flex;
     justify-content: center; 
-    background-color: #fff;
+    background-color: $white;
     filter: drop-shadow(rgba(0,0,0,0.9) 10px 10px 49px);
 
     &--visuals-container {
@@ -12,7 +12,7 @@
 
     &:hover {
         #img-visualizer--controls {
-            filter: opacity(0.75);
+            filter: opacity(1);
             transition: filter 0.2s ease-in-out;
         }
     } 
@@ -67,17 +67,18 @@
             bottom: 25px;
             width: 550px;
             filter: drop-shadow(rgba(0,0,0,0.43) 0px 0px 25px);
+            filter: opacity(0.75);
         }
 
         &--vertical {
             transform: rotate(90deg);
             width: 612px;
             top: 290px;
-            left: 300px;
+            left: -300px;
             -webkit-appearance: none; /* Override default look */
             position: absolute;
             appearance: none;
-            background-color: #f1f3f4;
+            background-color: $white;
 
             &.slider::-webkit-slider-thumb,
             &.slider::-moz-range-thumb {
@@ -87,6 +88,14 @@
                 height: 25px; /* Slider handle height */
                 background: #04AA6D; /* Green background */
                 cursor: pointer; /* Cursor on hover */
+            }
+
+            &__container {
+                height: 100%;
+                overflow: hidden;
+                width: 50px;
+                position: absolute;
+                left: 600px;
             }
         }
     }
